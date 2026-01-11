@@ -11,17 +11,13 @@ export function Header() {
           <a href="#home" className="text-foreground hover:text-primary transition-colors">
             HOME
           </a>
-          <a href="#documentation" className="text-muted-foreground hover:text-foreground transition-colors">
-            DOCUMENTATION
-          </a>
-          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-            FEATURES
-          </a>
-          <a href="#purchase" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a
+            href="https://discord.gg/kzuhQzv3TQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             PURCHASE
-          </a>
-          <a href="#discord" className="text-muted-foreground hover:text-foreground transition-colors">
-            DISCORD
           </a>
         </nav>
       </div>

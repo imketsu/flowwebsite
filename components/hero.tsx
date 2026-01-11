@@ -1,6 +1,13 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
+  const scrollToDownloads = () => {
+    const downloadSection = document.getElementById("download-section")
+    downloadSection?.scrollIntoView({ behavior: "smooth", block: "center" })
+  }
+
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-16">
       {/* Repeating background text */}
@@ -28,15 +35,22 @@ export function Hero() {
           begin
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-          <Button size="lg" className="text-base px-8 bg-secondary hover:bg-secondary/80 text-foreground">
+          <Button
+            size="lg"
+            className="text-base px-8 bg-secondary hover:bg-secondary/80 text-foreground"
+            onClick={scrollToDownloads}
+          >
             Download
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="text-base px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+            asChild
           >
-            Get Key
+            <a href="https://discord.gg/kzuhQzv3TQ" target="_blank" rel="noopener noreferrer">
+              Get Key
+            </a>
           </Button>
         </div>
         <p className="text-muted-foreground text-sm mt-6">Brought to you by the Flow Development Team</p>
